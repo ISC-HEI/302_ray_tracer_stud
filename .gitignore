@@ -41,3 +41,6 @@ Makefile
 
 # Doxygen documentation
 docs/
+
+# Machine specific files
+compile_commands.json
