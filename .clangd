@@ -1,0 +1,15 @@
+CompileFlags:
+  Remove:
+    - -W*
+    - -forward-unknown-to-host-compiler
+    - --options-file
+    - --generate-code=*
+    - -Xcompiler=*
+    - --expt-relaxed-constexpr
+    - --expt-extended-lambda
+    - -rdc=true
+    - -rdc
+    - --relocatable-device-code=*
+
+Diagnostics:
+  UnusedIncludes: None

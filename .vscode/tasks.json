@@ -1,0 +1,48 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "CMake: fresh",
+			"command": "cd ${workspaceFolder}/build && cmake .. --fresh -DCMAKE_EXPORT_COMPILE_COMMANDS=1 && cp compile_commands.json ..",			
+			"problemMatcher": [],
+			"detail": "CMake clean eveyrhing",
+			"group": {
+				"kind": "none",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Make build",
+			"command": "cd ${workspaceFolder}/build && make -j 8",
+			"problemMatcher": [],
+			"detail": "Build with make",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		},
+		{
+			"type": "shell",
+			"label": "Launch",
+			"command": "cd ${workspaceFolder}/build && ./302_raytracer",
+			"problemMatcher": [],
+			"detail": "Launch the program",
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": true,
+				"panel": "shared",
+				"showReuseMessage": false,
+				"clear": false
+			},
+			"dependsOn": "Make build",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			}
+		}
+		
+	]
+}
