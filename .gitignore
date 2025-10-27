@@ -38,3 +38,6 @@ Makefile
 *.nvcache
 *.nvlog
 *.ppm
+
+# Doxygen documentation
+docs/

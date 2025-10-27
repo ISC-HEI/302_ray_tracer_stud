@@ -60,6 +60,50 @@ This is all you need ! Please don't install MS `C/C++` plugin, it does not work 
 
 The first goes fast, the second has debug information. To compile each version, see (README_BUILD.md).
 
+## Documentation
+
+This project uses **Doxygen** to generate comprehensive API documentation from the code comments. The documentation includes:
+- Class hierarchies and inheritance diagrams
+- Function call graphs and caller graphs
+- Detailed API references
+- Mathematical explanations for ray tracing algorithms
+
+### Prerequisites
+
+Install Doxygen and Graphviz (for generating diagrams):
+
+```bash
+sudo apt-get install doxygen graphviz
+```
+
+### Generating Documentation
+
+Simply run:
+
+```bash
+./generate_docs.sh
+```
+
+Or manually:
+
+```bash
+doxygen Doxyfile
+```
+
+The documentation will be generated in the `docs/` directory:
+- **HTML documentation**: `docs/html/index.html` (open this in your browser)
+- **LaTeX documentation**: `docs/latex/` (can be compiled to PDF)
+
+### Viewing Documentation
+
+To view the HTML documentation:
+
+```bash
+xdg-open docs/html/index.html
+```
+
+Or simply open `docs/html/index.html` in your favorite web browser.
+
 ## License
 
 This work is licensed under a [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
