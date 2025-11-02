@@ -13,9 +13,9 @@ It uses [single-file public domain (or MIT licensed) libraries for C/C++](https:
 
 
 <div align="center" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <img src="images/output.png" alt="Ray Tracer Output" width="25%">
+    <img src="images/output.png" alt="Ray Tracer Output" width="45%">
     <span style="font-size: 2em;">→</span>
-    <img src="images/expected/end_2048s.png" alt="The Ray Tracer Output when the project is finished" width="25%">
+    <img src="images/expected/end_2048s.png" alt="The Ray Tracer Output when the project is finished" width="44%">
 </div>
 <div align="center">
     <p><em>The CPP renderer that you get, on the left. On the right, the expected result using CUDA</em></p>
