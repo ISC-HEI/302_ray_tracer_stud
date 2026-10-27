@@ -1,0 +1,11 @@
+{
+    // VS Code proposes to install these when the folder is opened
+    // (Extensions view > "Recommended", or "Extensions: Show Recommended Extensions").
+    "recommendations": [
+        "llvm-vs-code-extensions.vscode-clangd",
+        "ms-vscode.cmake-tools",
+        "twxs.cmake",
+        "nvidia.nsight-vscode-edition",
+        "ms-vscode.cpptools"
+    ]
+}

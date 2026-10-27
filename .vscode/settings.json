@@ -72,5 +72,14 @@
         "format": "cpp",
         "__nullptr": "cpp"
     },
-    "C_Cpp.default.compilerPath": "/usr/bin/clang"
+    "C_Cpp.default.compilerPath": "/usr/bin/clang",
+    // clangd (configured in .clangd) provides IntelliSense; disable the cpptools
+    // engine so the two do not report duplicate or conflicting diagnostics.
+    "C_Cpp.intelliSenseEngine": "disabled",
+    "[cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    },
+    "[cuda-cpp]": {
+        "editor.defaultFormatter": "llvm-vs-code-extensions.vscode-clangd"
+    }
 }

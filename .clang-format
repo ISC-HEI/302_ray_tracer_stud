@@ -3,5 +3,6 @@ BasedOnStyle: LLVM
 ColumnLimit: '120'
 UseTab: Never
 IndentWidth: 3
+AlignEscapedNewlines: Left
 BreakBeforeBraces: Allman
 ...

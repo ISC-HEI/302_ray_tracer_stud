@@ -9,8 +9,7 @@ There are multiple implementations provided:
 - multi-threaded
 - the boilerplate for running the CUDA version is present. However, most of it is missing (as it is your job to implement it in the project)!
 
-It uses [single-file public domain (or MIT licensed) libraries for C/C++](https://github.com/nothings/stb/tree/master).
-
+It uses the amazing [single-file public domain (or MIT licensed) libraries for C/C++](https://github.com/nothings/stb/tree/master).
 
 <div align="center" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
     <img src="images/output.png" alt="Ray Tracer Output" width="45%">
@@ -53,7 +52,7 @@ Install extension `clangd` from `LLVM`, for linting and formatting (the formatti
 This is all you need ! Please don't install MS `C/C++` plugin, it does not work well with _NVidia_ stuff.
 
 ### Running your project during development
-- There are *tasks* created in the `.vscode` folder that can be launched with `CTRL+sudoShift+P` → Tasks and then you can build and run. You can even set up key bindings for that.
+- There are *tasks* created in the `.vscode` folder that can be launched with `CTRL+Shift+P` → Tasks and then you can build and run. You can even set up key bindings for that.
 - Otherwise, run everything from the command line. 
 
 ## Choosing RELEASE or DEBUG versions
