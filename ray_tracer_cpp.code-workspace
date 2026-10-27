@@ -2,6 +2,9 @@
 	"folders": [
 		{
 			"path": "."
+		},
+		{
+			"path": "../302_ray_tracer_solution"
 		}
 	],
 	"settings": {
