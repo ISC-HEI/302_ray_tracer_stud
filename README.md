@@ -2,17 +2,19 @@
 
 This is a complete hand-made re-implementation of the C++ [`InOneWeekend`](https://github.com/RayTracing/raytracing.github.io/tree/release/src/InOneWeekend) ray-tracer implementation (an amazing resource!). 
 
-The default rendering produced is 
-
-There are multiple implementations provided: 
-- single-threaded
-- multi-threaded
-- the boilerplate for running the CUDA version is present. However, most of it is missing (as it is your job to implement it in the project)!
+Multiple implementations are provided: 
+- CPU single-threaded
+- CPU multi-threaded
+- GPUO boilerplate, for running the CUDA version. However, most of it is missing as it is your job to implement it in the project!
 
 It uses the amazing [single-file public domain (or MIT licensed) libraries for C/C++](https://github.com/nothings/stb/tree/master).
 
+## Project objectives
+
+*Pretty simple* : start with the renderer that produces the image on the left, and implement the GPU renderer to produce the image on the right.
+
 <div align="center" style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-    <img src="images/output.png" alt="Ray Tracer Output" width="45%">
+    <img src="images/begin_4s.png" alt="Ray Tracer Output" width="45%">
     <span style="font-size: 2em;">→</span>
     <img src="images/expected/end_2048s.png" alt="The Ray Tracer Output when the project is finished" width="44%">
 </div>
@@ -20,6 +22,7 @@ It uses the amazing [single-file public domain (or MIT licensed) libraries for C
     <p><em>The CPP renderer that you get, on the left. On the right, the expected result using CUDA</em></p>
 </div>
 
+The time to compute the image on the left, using 4 samples per pixel, is around 10 seconds (for ~16 mios of rays) on single-core CPU. To compute the image on the right, 2.5 billions of rays were shot, in around 18 seconds.
 
 ## Using CMAKE to generate compilation scripts
 
@@ -29,7 +32,7 @@ To build your project, start by running
 mkdir build
 cd build
 cmake .. --fresh -G 'Unix Makefiles' -DCMAKE_EXPORT_COMPILE_COMMANDS=1 && cp compile_commands.json ..
-make -j4
+make -j8
 ```
 
 This should create the required `Makefile` using `CMake` and compile it using 4 threads. You can then execute the CPP version using
@@ -47,7 +50,7 @@ make && echo "2" | ./302_raytracer
 
 ## Develop with VSCode
 
-Install extension `clangd` from `LLVM`, for linting and formatting (the formatting options are present in the `.clangd-format` fil and the options for the linting are in `.clangd`). 
+Install the suggested extensions, notably `clangd` from `LLVM`. This is for linting and formatting (the formatting options are present in the `.clangd-format` file and the options for the linting are in `.clangd`). 
 
 This is all you need ! Please don't install MS `C/C++` plugin, it does not work well with _NVidia_ stuff.
 
